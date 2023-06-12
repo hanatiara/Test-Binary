@@ -27,6 +27,7 @@
             $bit = substr($bit, 0, -1);
             $power++;
         }
+
         return $result;
     }
 
@@ -53,7 +54,7 @@
         $result = 0;
         $power = 0;
         while($hex != '') {
-            $result += pow(16, $power) * (int) decChecker(substr($hex, -1));
+            $result += pow(16, $power) * (int) decChecker(substr(strtoupper($hex), -1));
             $hex = substr($hex, 0, -1);
             $power++;
         }
@@ -116,9 +117,9 @@
         return substr($string, $offset);
     }
     // echo DecToHex('00');
-    echo HexToDec('FFF');
+    echo HexToDec('ff');
     // echo hexChecker(13);
-    // echo BinaryToDec('11011');
+    // echo BinaryToDec('11');
     // echo BinaryToDec(100);
     // echo substr('1', 0, -1);
     // echo stringChecker('002', 1);

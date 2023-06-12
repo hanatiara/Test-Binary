@@ -43,7 +43,7 @@ int main()
     default:
         break;
     }
-
+    scanf("");
     return 0;
 }
 
@@ -133,10 +133,12 @@ int HexToDec(const char* hex) {
     int result = 0;
     int power = 0;
     int length = strlen(hex);
+    char temp;
     int index = length - 1; // index in C starts from 0
 
     while(index >= 0) {
-        conv = decChecker(hex[index]);
+        temp = toupper(hex[index]);
+        conv = decChecker(temp);
         result += pow(16, power) * conv;
         index = index - 1;
         power++;
