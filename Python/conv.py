@@ -2,7 +2,7 @@ def DecTobinary(number):
     if (number == 0): return 0
     result = ''
     lastdigit = 0
-    for x in range (17):
+    for x in range (9):
         lastdigit = number % 2
         number = number // 2
         result = str(lastdigit) + result
@@ -26,7 +26,7 @@ def DecToHex(number):
     if (number == 0): return 0
     result = ''
     lastdigit = 0
-    for x in range (17):
+    for x in range (9):
         lastdigit = number % 16
         number = number // 16
         result = str(toHex(lastdigit)) + result
@@ -82,8 +82,8 @@ def toHex(dec):
         
 
 
-# print(DecTobinary(255))
+print(DecTobinary(255))
 # print(BinaryToDec("11011"))
 # BinaryToDec("11111111")
-# print(DecToHex(3375))
-print(HexToDec("ff"))
+print(DecToHex(3375))
+# print(HexToDec("ff"))
